@@ -25,62 +25,7 @@ bootstrap/
 storage/
 public/assets
 
-Database setup
-
-
-```php
-
-create database company_db
-
-```
-
-##Users
-
-```php
-
-create table users (id INT(32) NOT NULL AUTO_INCREMENT,name VARCHAR(50), password VARCHAR(50), 
-
-email VARCHAR(50), updated_at VARCHAR(50), created_at VARCHAR(50), remember_token VARCHAR(50), 
-
-PRIMARY KEY(id));
-
-```
-
-##Customers
-
-```php
-
-create table customers(id INT(32) NOT NULL AUTO_INCREMENT, name VARCHAR(50), homePhone 
-
-VARCHAR(13), cellPhone VARCHAR(13), address VARCHAR(50), postal VARCHAR(10), town VARCHAR(25), 
-
-status VARCHAR(10), PRIMARY KEY(id));
-
-```
-
-##Jobs
-
-```php
-
-create table jobs(id INT(32) NOT NULL, label VARCHAR(32), description VARCHAR(500), jobNumber 
-
-INT(32) NOT NULL AUTO_INCREMENT, Service date, cost float(16), PRIMARY KEY(jobNumber));
-
-```
-
-##Job Images
-
-```php
-
-create table jobImages(imageID INT(32) NOT NULL AUTO_INCREMENT, customerID INT(32), jobNumber 
-
-int(32), label1 VARCHAR(16), label2 VARCHAR(16), label3 VARCHAR(32), label4 VARCHAR(32), 
-
-label5 VARCHAR(32), PRIMARY KEY(imageID));
-
-```
-
-Lastly update the config/database.php username and password with your credentials for mysql DB
+Lastly update the .env username and password with your credentials for your DB
 
 
 ## Laravel PHP Framework
